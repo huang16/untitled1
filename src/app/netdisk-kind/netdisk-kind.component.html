@@ -1,0 +1,7 @@
+<div class="netdisk_item0">
+  <nz-card *ngFor="let item of netdiskItemContainer">
+    <a target="_blank" routerLink="netdisk/:{{item.rid}}">{{item.name}}</a>
+    <p>{{item.url}}</p>
+    <p>{{item.cipher}}</p>
+  </nz-card>
+</div>
