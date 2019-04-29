@@ -1,0 +1,22 @@
+<div class="index_carousel">
+  <nz-carousel nzAutoPlay>
+    <div nz-carousel-content *ngFor="let index of array"><a href="{{index.link}}"><img class="carousel_img"
+                                                                                       src="{{index.pic}}"></a></div>
+  </nz-carousel>
+</div>
+<nz-layout class="main_content">
+  <nz-content>
+    <nz-card class="left_story">
+      <nz-card-tab>
+        <nz-tabset nzSize="large" [(nzSelectedIndex)]="selectedTab">
+          <nz-tab nzTitle="推荐"></nz-tab>
+          <nz-tab nzTitle="关注"></nz-tab>
+          <nz-tab nzTitle="推荐？"></nz-tab>
+        </nz-tabset>
+      </nz-card-tab>
+      <div *ngFor="let item of indexStoryItems">
+        <app-index-story-item *ngIf="selectedTab==0" [item]="item"></app-index-story-item>
+      </div>
+    </nz-card>
+  </nz-content>
+</nz-layout>

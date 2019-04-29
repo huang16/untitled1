@@ -1,0 +1,12 @@
+.foot_box{
+  display: block;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+.foot_link{
+  margin-bottom: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+
+}

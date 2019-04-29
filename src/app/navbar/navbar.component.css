@@ -1,0 +1,12 @@
+#index_search_box{
+  width: 20%;
+}
+.user_icon_container{
+  text-align: right;
+  width: 40%;
+  padding-right: 20px;
+}
+mat-toolbar{
+  box-shadow: 0 1px 3px rgba(26,26,26,.5);
+  margin-bottom: 3px;
+}

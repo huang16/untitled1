@@ -1,0 +1,31 @@
+<nz-card [nzTitle]="titleTemplate">
+  <div class="inner_box">
+    <p>{{item.inner}}<a href="{{item.url}}">阅读更多</a></p>
+
+  </div>
+  <div class="action_box">
+    <nz-button-group [nzSize]="size">
+      <button nz-button nzType="primary"><i nz-icon type="up"></i>赞 {{item.voteup}}</button>
+      <button nz-button nzType="primary">踩<i nz-icon type="down"></i></button>
+    </nz-button-group>
+    <button nz-button nzType="default">评论 {{item.comment}}</button>
+    <button nz-button nzType="default">收藏</button>
+    <button nz-button nzType="default">分享</button>
+    <label>{{item.reader}}已读</label>
+    <nz-dropdown>
+      <button nz-button nz-dropdown><i nz-icon type="down"></i></button>
+      <ul nz-menu>
+        <li nz-menu-item>
+          <a>不感兴趣</a>
+        </li>
+        <li nz-menu-item>
+          <a>举报</a>
+        </li>
+      </ul>
+    </nz-dropdown>
+  </div>
+
+</nz-card>
+<ng-template #titleTemplate>
+  <a href="{{item.url}}">{{item.title}}</a>
+</ng-template>

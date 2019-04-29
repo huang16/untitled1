@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <a routerLink="/"><img src="favicon.ico" ></a>
+  <a mat-button routerLink="/">学术部网盘</a>
+  <a mat-button routerLink="/netdisk">网盘资源</a>
+  <a mat-button routerLink="/tutorial">教程专区</a>
+  <a mat-button routerLink="/fun">近期活动</a>
+  <ng-template #suffixIconSearch>
+    <i nz-icon type="search"></i>
+  </ng-template>
+  <nz-input-group id="index_search_box" [nzSuffix]="suffixIconSearch">
+    <input   type="text" nz-input placeholder="">
+  </nz-input-group>
+  <div class="user_icon_container">
+    <a href="/"><img class="nav_bar_icon" id="notice_icon" src="favicon.ico" ></a>
+    <a href="/"><img class="nav_bar_icon" id="message_icon"src="favicon.ico" ></a>
+    <a href="/"><img class="nav_bar_icon" id="user_icon"src="favicon.ico" ></a>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,21 @@
+<nz-layout class="netdisk_layout">
+  <nz-sider class="netdisk_sider" >
+    <ul nz-menu >
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(0)">最新</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(1)">素材模板</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(2)">编程知识体系</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(3)">程序员成长路径</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(4)">电子书资源</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(5)">学习资料</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(6)">常用软件</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(7)">系统映像</li>
+      <li nz-menu-item (click)="itemdisplay.setDisplayKind(8)">电影</li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-content>
+      <app-netdisk-kind #itemdisplay></app-netdisk-kind>
+      <app-error-message></app-error-message>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

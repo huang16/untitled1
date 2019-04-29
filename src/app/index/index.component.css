@@ -1,0 +1,28 @@
+[nzAutoPlay]{
+  width: 240px;
+}
+[nz-carousel-content] {
+  text-align: center;
+  height: 160px;
+  width: 40%;
+  overflow: hidden;
+}
+nz-carousel{
+  text-align: center;
+}
+.carousel_img{
+  height: 100%;
+  width: 100%;
+}
+.index_carousel {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+nz-content{
+  padding: 0 15%;
+}
+app-index-story-item{
+  display: block;
+}
