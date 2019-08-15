@@ -1,5 +1,18 @@
-<app-navbar></app-navbar>
 <div class="netdisk_intro">
+  <div class="title">
+    <h1>{{detailModel.title}}</h1>
+    <h2>{{detailModel.rid}}</h2>
+    <h2>{{detailModel.authorid}}</h2>
+    <ul>
+      <li>ct:{{detailModel.createtime}}</li>
+      <li>le:{{detailModel.lastedit}}</li>
+      <li>up:{{detailModel.star.up}}</li>
+      <li>down:{{detailModel.star.down}}</li>
+      <li>mark:{{detailModel.mark}}</li>
+      <li>su:{{detailModel.detail.summary}}</li>
+      <li>tx:{{detailModel.detail.detailtext}}</li>
+      <li *ngFor="let item of detailModel.comments">id:{{item.commentatorid}} tx:{{item.commenttext}}</li>
+    </ul>
+  </div>
 
 </div>
-<app-footer></app-footer>

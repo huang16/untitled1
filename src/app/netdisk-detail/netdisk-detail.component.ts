@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NetdiskArticle, NetdiskDetailService} from '../netdisk-detail.service';
+import {ServerList} from '../dataStruct/serverList';
 
 @Component({
   selector: 'app-netdisk-detail',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NetdiskDetailComponent implements OnInit {
 
-  constructor() { }
+  detailModel: NetdiskArticle;
+  serverList = new ServerList();
+
+  constructor(private netdiskDetailService: NetdiskDetailService) {
+  }
 
   ngOnInit() {
+    console.log(location.pathname);
+    this.detailInit( this.serverList.serverList[0] + location.pathname);
+  }
+
+  detailInit(url: string) {
+    this.netdiskDetailService.getNetdiskArticle(url).subscribe(
+      netdiskArticle => {
+        console.log(netdiskArticle);
+        this.detailModel = netdiskArticle;
+      }
+    );
   }
 
 }

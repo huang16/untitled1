@@ -18,9 +18,9 @@ export class NetdiskListService {
     private http: HttpClient,
     private messageService: ErrMessageService
   ) {
-    NetdiskListService.netdiskKindListUrl = 'http://' + NetdiskListService.serverList.serverList[0] + '/netdisk' + '/type';
+    NetdiskListService.netdiskKindListUrl = NetdiskListService.serverList.serverList[0] + '/netdisk' + '/type';
     console.log(NetdiskListService.netdiskKindListUrl);
-    NetdiskListService.netdiskItemListUrl = 'http://' + NetdiskListService.serverList.serverList[0] + '/netdisk';
+    NetdiskListService.netdiskItemListUrl = NetdiskListService.serverList.serverList[0] + '/netdisk';
   }
 
   static netdiskKind: string[] = [];
